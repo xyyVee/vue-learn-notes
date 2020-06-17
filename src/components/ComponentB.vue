@@ -3,7 +3,7 @@
     <p>B组件</p>
     <p>来自A的值: {{value}}</p>
     <p>$parent.belongA: <b>{{$parent.belongA}}</b></p>
-    <p>count: {{count}}</p>
+    <!-- <p>count: {{count}}</p> -->
     <p>inject: {{rootValue}}</p>
     <p>eventBus: {{getValue}}</p>
     <p>
@@ -34,13 +34,13 @@ export default {
   },
   mounted () {
     // console.log(this.$parent.belongA)
-    const timer = setInterval(() => {
-      this.count++
-      if (this.count > 10) {
-        clearInterval(timer)
-      }
-      // console.log(this.count)
-    }, 1000)
+    // const timer = setInterval(() => {
+    //   this.count++
+    //   if (this.count > 10) {
+    //     clearInterval(timer)
+    //   }
+    // console.log(this.count)
+    // }, 1000)
     EventBus.$on('sendMessage', val => {
       this.getValue = val
     })

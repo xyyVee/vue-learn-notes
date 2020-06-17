@@ -3,9 +3,9 @@
     <p>这是父节点A</p>
     <p>A组件值：{{value}}</p>
     <p>belongA: {{belongA}}</p>
-    <p v-if="show">
+    <!-- <p v-if="show">
       $children: {{$children[0].count}}
-    </p>
+    </p> -->
     <!-- <p v-if="$refs.compB">refs: {{$refs.compB.count}}</p> -->
     <div>
      <button @click="changeB">改变B的值inputValue为200</button>
@@ -32,10 +32,10 @@ export default {
   },
   mounted () {
     // console.log(this.$children[0].count, this.$refs.compB.count, 'get')
-    setTimeout(() => {
-      // console.log(this.$children[0].count, this.$refs.compB.count, 'get')
-      this.show = true
-    }, 3000)
+    // setTimeout(() => {
+    // console.log(this.$children[0].count, this.$refs.compB.count, 'get')
+    //   this.show = true
+    // }, 3000)
   },
   methods: {
     receiveValue (val) {

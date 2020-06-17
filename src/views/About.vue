@@ -1,7 +1,7 @@
 <template>
   <div class="about">
-    <h1>$attrs / $listeners</h1>
-    <Parent :name="name" :age="age" :gender="gender" :address="address" />
+    <h1>count: {{count}}</h1>
+    <Parent :name="name" :age="age" :gender="gender" :count="count" :address="address" @clickEvent="clickEvent"/>
   </div>
 </template>
 <script>
@@ -16,7 +16,13 @@ export default {
       address: {
         province: '浙江省',
         city: '杭州市'
-      }
+      },
+      count: 0
+    }
+  },
+  methods: {
+    clickEvent () {
+      this.count++
     }
   }
 }
