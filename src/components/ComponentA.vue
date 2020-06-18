@@ -36,6 +36,17 @@ export default {
     // console.log(this.$children[0].count, this.$refs.compB.count, 'get')
     //   this.show = true
     // }, 3000)
+    // 测试闭包
+    const params = {
+      count: 0
+    }
+    for (let i = 0; i < 3; i++) {
+      // params.count = i
+      setTimeout(() => {
+        params.count = i
+        console.log(i, params.count)
+      }, 1000)
+    }
   },
   methods: {
     receiveValue (val) {
