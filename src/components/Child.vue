@@ -6,7 +6,7 @@
     <!-- 不传$attrs -->
     <Child2 v-on="$listeners"/>
     <!-- 传$attrs -->
-    <Child2 v-bind="$attrs" :name="name"/>
+    <Child2 v-bind="$attrs" :parent="name"/>
   </div>
 </template>
 
